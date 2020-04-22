@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/szhan89/CNIT315/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Abstract
+An application develop with ANSI C language that focuses on processing data regarding weather information. The program will retrieve weather-related information, and perform multiple actions including analyzing, sorting, searching and storing.
+The program also includes a graphical user interface that will display key information of weather and other related statistics, it also enable the user to perform activities such as searching for key information and filtering out factors to obtain information as needed.
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Enviroment:
+-Linux Ubuntu
+-libcurl
+-GCC Compiler
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/szhan89/CNIT315/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+To run the program, 
+1. Download the source code
+2. Open Terminal
+3. Enter command "gcc main.c APIcall.c -lcurl <filename>"
+4. Use command "./<filename>" to run the excutable file
