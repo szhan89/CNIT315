@@ -6,7 +6,9 @@ The program also includes a graphical user interface that will display key infor
 
 Enviroment:
 -Linux Ubuntu
--libcurl
+
+-libcurl(use "sudo apt-get install libcurl4-openssl-dev")
+
 -GCC Compiler
 
 To run the program, 
