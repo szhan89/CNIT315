@@ -15,7 +15,7 @@ struct forecast{//different times of a location
     char * windDirection;
     char * windSpeed;
     int temperature;
-    char * feels_like;
+    char * feelsLike;
     char * pressure;
     char * humidity;
     char * weatherDes;
@@ -25,7 +25,7 @@ struct forecast{//different times of a location
 struct cityInformation{//the information about a location
     char* cityName;
     char* Country;
-    int timezone;
+    int timeZone;
     struct forecast forcastInformation[40];//contain 40 different times
 };
 char* getTimezone(int a){//convert the time zone from seconds to hour
@@ -72,7 +72,7 @@ void readXml(){
     temp = cJSON_GetArrayItem(NodeCity, 2);//get the arrayed json item
     cI.Country  =  temp->valuestring;//put the string in item in to the struct
     temp = cJSON_GetArrayItem(NodeCity, 3);//get the arrayed json item
-    cI.timezone = temp->valueint;
+    cI.timeZone = temp->valueint;
     
     cJSON *Time = NULL;
     Time = cJSON_GetObjectItem(json,"list");
