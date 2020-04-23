@@ -40,14 +40,14 @@ char* getTimezone(int a){//convert the time zone from seconds to hour
     // printf("%s",c);
     return c;
 }
-void readXml(){
+void readJson(){
     
     struct cityInformation cI;//createing a city structure
     char jsonString[100000]="";//set string for the json
     FILE *jsonFile;//create a json file
     char ch;
     //2
-    jsonFile = fopen("weather.xml", "r");//read the json file
+    jsonFile = fopen("weather.json", "r");//read the json file
     //3
     if (jsonFile == NULL)
     {
