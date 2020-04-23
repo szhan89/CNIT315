@@ -9,7 +9,7 @@ void APIcall(char *zipcode){
     FILE *fp;
     int result;
     int insert_index=52;//the start location of zipcode insert 
-    char *api="http://api.openweathermap.org/data/2.5/forecast?zip=,us&appid=2d2179e0ac9680ea504b01d61da6ba23&mode=xml";//the api used to obtain 5 day weather information of U.S with given zipcode
+    char *api="http://api.openweathermap.org/data/2.5/forecast?zip=,us&appid=2d2179e0ac9680ea504b01d61da6ba23&mode=json";//the api used to obtain 5 day weather information of U.S with given zipcode
     char *url=malloc(strlen(zipcode)+strlen(api)+1);//allocate space for the url
     /*###############################*/
 
