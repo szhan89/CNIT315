@@ -4,7 +4,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <limits.h>
-
 #include"cJSON.h"
 
 
@@ -12,12 +11,12 @@
 
 struct forecast{//different times of a location
     char* time;
-    char * windDirection;
-    char * windSpeed;
-    int temperature;
-    char * feelsLike;
-    char * pressure;
-    char * humidity;
+    double windDirection;
+    double windSpeed;
+    double temperature;
+    double feelsLike;
+    double pressure;
+    int humidity;
     char * weatherDes;
     
 };
@@ -94,10 +93,21 @@ void readJson(){
         
         a = cJSON_GetObjectItem(temp,"main");
         b = cJSON_GetObjectItem(a,"temp");
-        Forecast.temperature = b->valueint;
+        Forecast.temperature = b->valuedouble;
+        b = cJSON_GetObjectItem(a,"humidity");
+        Forecast.humidity = b->valueint;
+        b = cJSON_GetObjectItem(a,"feels_like");
+        Forecast.feelsLike = b->valuedouble;
+        b = cJSON_GetObjectItem(a,"pressure");
+        Forecast.pressure = b->valuedouble;
+
         
         
-        
+        a = cJSON_GetObjectItem(temp,"wind");
+        b = cJSON_GetObjectItem(a,"speed");
+        Forecast.windSpeed = b->valuedouble;
+        b = cJSON_GetObjectItem(a,"deg");
+        Forecast.windDirection = b->valuedouble;
         cI.forcastInformation[i] = Forecast;
         
         
