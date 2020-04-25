@@ -1,9 +1,18 @@
+//
+//  readXML.c
+//  315
+//
+//  Created by Kevin Zhang on 4/23/20.
+//  Copyright © 2020 CNIT255. All rights reserved.
+//
+
 #include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <limits.h>
+
 #include"cJSON.h"
 
 
@@ -25,7 +34,7 @@ struct cityInformation{//the information about a location
     char* cityName;
     char* Country;
     int timeZone;
-    struct forecast forcastInformation[40];//contain 40 different times
+    struct forecast forecastInformation[40];//contain 40 different times
 };
 char* getTimezone(int a){//convert the time zone from seconds to hour
     a= a/3600;
@@ -108,7 +117,7 @@ void readJson(){
         Forecast.windSpeed = b->valuedouble;
         b = cJSON_GetObjectItem(a,"deg");
         Forecast.windDirection = b->valuedouble;
-        cI.forcastInformation[i] = Forecast;
+        cI.forecastInformation[i] = Forecast;
         
         
         
