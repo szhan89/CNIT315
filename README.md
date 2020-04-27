@@ -17,4 +17,3 @@ To run the program,
 2. Download the source code using "git clone <http address>"
 3. Enter command "gcc main.c APIcall.c readJson.c cJSON.c  -lcurl"
 4. Use command "./a.out" to run the excutable file
-# CNIT1115

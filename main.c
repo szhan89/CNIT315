@@ -12,10 +12,8 @@ int main(){
    readJson();
 
    DisplayData();
-<<<<<<< HEAD
-   CheckWeather();
-   modeTemperature();
-=======
+
+
   int cases, next,initial;
    initial = 5;
    next = 10;
@@ -69,8 +67,6 @@ int main(){
   	 
  	}while(cases != 7);
    
-   
->>>>>>> 0fe53462ba4b2fe5acea2c17ff3349f23236ce87
     return 0;
     
    

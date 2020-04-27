@@ -151,8 +151,6 @@ void DisplayData()
 	 	printf("%-25s", cI.forecastInformation[i].weatherDes);
 	 }
 	 
-
-	 
 	 printf("\nTemperature:    ");
 	   
 	  for(int i=0;i<5;i++) //for loop to display contents of array
@@ -171,12 +169,9 @@ void DisplayData()
 	 	printf("%-3.0f°C                    ", temp);
 	 }
 	 
-<<<<<<< HEAD
-	 printf("\nHumidity(%%):    ");
-=======
+
 	 printf("\nHumidity:       ");
->>>>>>> 0fe53462ba4b2fe5acea2c17ff3349f23236ce87
-	 
+
 	  for(int i=0;i<5;i++) //for loop to display contents of array
 	 {
 	 	printf("%-3i%%                     ", cI.forecastInformation[i].humidity);
@@ -204,6 +199,7 @@ void DisplayData()
 	 {
 	 	printf("%-3.0f°                     ", cI.forecastInformation[i].windDirection);
 	 }
+
 	printf("\n");
 	
 }
@@ -274,9 +270,9 @@ int maxValue = 0, maxCount = 0, i, j;
    modeTem = maxValue;
 printf("The mode temperature is %-3.0f°C                    \n", modeTem);
 }
+	 printf("\n");
 
-
-
+}
 
 
 
