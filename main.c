@@ -21,10 +21,13 @@ int main(){
    	 printf("\n1. Display the average temperature for next 24 hours:");
    	 printf("\n2. Display the informaion for next 5 times");
    	 
-   	 printf("\n7.Exit the program\n");
+   	 printf("\n7. Exit the program\n");
    	 
   	 printf("\nYour choice: ");
   	 scanf("%d", &cases);
+  	 
+  	 if(cases >=1&& cases <=7)
+  	 {
   	 
    	 switch (cases)
   	 {
@@ -50,8 +53,15 @@ int main(){
    		printf("Bye!!!\n");
    		exit(0);
    		break;
+   	}
+   	
+   	}
+   	else
+   	{
+   		printf("Please enter a valid option(1-7)!!!!!!!!\n");
+   	}
    		
-  	 }
+  	 
  	}while(cases != 7);
    
    
