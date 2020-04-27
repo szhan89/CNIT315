@@ -3,4 +3,7 @@
 
 void APIcall(char *zipcode);
 void readJson();
+void DisplayData();
+void CalculateAverageTemp();
+void DisplayNext();
 #endif

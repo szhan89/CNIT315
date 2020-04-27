@@ -27,7 +27,7 @@ void APIcall(char *zipcode){
     result = curl_easy_perform(curl);//download the API returns and store download status
     
     if(result==CURLE_OK)
-        printf("Done!\n");
+        printf("Retrieving Data....\n\n");
     else
         printf("ERROR: %s\n", curl_easy_strerror(result));
 
