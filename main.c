@@ -10,10 +10,69 @@ int main(){
    scanf("%s",usr_zipcode);//Store user entered zipcode
    APIcall(usr_zipcode);//Make API call and generate a xml file with the location information
    readJson();
+
    DisplayData();
+<<<<<<< HEAD
    CheckWeather();
    modeTemperature();
+=======
+  int cases, next,initial;
+   initial = 5;
+   next = 10;
+   
+   do {
+   	 
+   	 printf("\nPlease choose from the following options");
+   	 printf("\n1. Display the average temperature for next 24 hours:");
+   	 printf("\n2. Display the informaion for next 5 times");
+   	 
+   	 printf("\n7. Exit the program\n");
+   	 
+  	 printf("\nYour choice: ");
+  	 scanf("%d", &cases);
+  	 
+  	 if(cases >=1&& cases <=7)
+  	 {
+  	 
+   	 switch (cases)
+  	 {
+   		case 1:
+   		CalculateAverageTemp();
+   		break;
+   		
+   		case 2:
+   	 	if(next<= 40)
+   	 	{
+   		DisplayNext(initial, next);
+   		initial +=5;
+   		next+=5;
+   		}
+   		else
+   		{
+   			printf("There are no more data to be displayed\n");
+   		}
+   		break;
+   		
+   		
+   		case 7:
+   		printf("Bye!!!\n");
+   		exit(0);
+   		break;
+   	}
+   	
+   	}
+   	else
+   	{
+   		printf("Please enter a valid option(1-7)!!!!!!!!\n");
+   	}
+   		
+  	 
+ 	}while(cases != 7);
+   
+   
+>>>>>>> 0fe53462ba4b2fe5acea2c17ff3349f23236ce87
     return 0;
+    
    
   
 }
