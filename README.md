@@ -13,7 +13,8 @@ Enviroment:
 -GCC Compiler
 
 To run the program, 
-1. Download the source code
-2. Open Terminal
-3. Enter command "gcc main.c APIcall.c -lcurl <filename>"
-4. Use command "./<filename>" to run the excutable file
+1. Open Linux Terminal
+2. Download the source code using "git clone <http address>"
+3. Enter command "gcc main.c APIcall.c readJson.c cJSON.c  -lcurl"
+4. Use command "./a.out" to run the excutable file
+# CNIT1115
