@@ -11,7 +11,54 @@ int main(){
    APIcall(usr_zipcode);//Make API call and generate a xml file with the location information
    readJson();
    DisplayData();
+  int cases, next,initial;
+   initial = 5;
+   next = 10;
+   
+   do {
+   	 
+   	 printf("\nPlease choose from the following options");
+   	 printf("\n1. Display the average temperature for next 24 hours:");
+   	 printf("\n2. Display the informaion for next 5 times");
+   	 
+   	 printf("\n7.Exit the program\n");
+   	 
+  	 printf("\nYour choice: ");
+  	 scanf("%d", &cases);
+  	 
+   	 switch (cases)
+  	 {
+   		case 1:
+   		CalculateAverageTemp();
+   		break;
+   		
+   		case 2:
+   	 	if(next<= 40)
+   	 	{
+   		DisplayNext(initial, next);
+   		initial +=5;
+   		next+=5;
+   		}
+   		else
+   		{
+   			printf("There are no more data to be displayed\n");
+   		}
+   		break;
+   		
+   		
+   		case 7:
+   		printf("Bye!!!\n");
+   		exit(0);
+   		break;
+   		
+  	 }
+ 	}while(cases != 7);
+   
+   
     return 0;
+    
+    
+    
    
   
 }

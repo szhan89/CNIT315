@@ -133,7 +133,7 @@ void readJson(){
 
 }
 
-void DisplayData()
+void DisplayData(int a)
 {
 	 int i, tzone = 0;
 	 double temp;
@@ -176,11 +176,11 @@ void DisplayData()
 	 	printf("%-3.0f°C                    ", temp);
 	 }
 	 
-	 printf("\nHumidity(%):    ");
+	 printf("\nHumidity:       ");
 	 
 	  for(int i=0;i<5;i++) //for loop to display contents of array
 	 {
-	 	printf("%-3i                      ", cI.forecastInformation[i].humidity);
+	 	printf("%-3i%%                     ", cI.forecastInformation[i].humidity);
 	 	
 	 }
 	 
@@ -202,6 +202,106 @@ void DisplayData()
 	 printf("\nWindDirection:  ");
 	 
 	 for(int i=0;i<5;i++) //for loop to display contents of array
+	 {
+	 	printf("%-3.0f°                     ", cI.forecastInformation[i].windDirection);
+	 }
+	 printf("\n");
+	
+	
+}
+
+
+
+void CalculateAverageTemp()
+{
+	 //calculate the average temperature for the next 24 hours
+	 
+	 double temp,average = 0;
+	 
+	 for(int i=0;i<8;i++)
+	 {
+	 	temp = cI.forecastInformation[i].temperature;
+	 	average = average + temp;
+	 }
+	 average = average/8 - 273.15;
+	
+	  printf("The average temperature for the next 24 hours is: %.1f°C\n", average);
+	 
+	
+}
+
+
+void DisplayNext(int b, int a)
+{
+	 int i, tzone;
+	 double temp;
+
+
+	 printf("Location Information\t  City name: %-20s", cI.cityName); //printf statements to display location information
+	 printf("Country: %-10s", cI.Country);
+	 tzone = getTimezone(cI.timeZone);
+	 printf("TimeZone: GMT%d:00\n\n", tzone);
+	 
+	 printf("Date/Time:      ");
+	 
+	 for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	printf("%-25s", cI.forecastInformation[i].time);
+	 }
+	 
+	 
+	 printf("\nWeather:        ");
+	 
+	 for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	printf("%-25s", cI.forecastInformation[i].weatherDes);
+	 }
+
+	 
+	 printf("\nTemperature:    ");
+	   
+	  for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	temp = cI.forecastInformation[i].temperature;
+	 	temp = temp - 273.15; //convert kelvin to celsius
+	 	printf("%-3.0f°C                    ", temp);
+	 }
+	 
+	 printf("\nFeels Like:     ");
+	 
+	 for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	temp = cI.forecastInformation[i].feelsLike;
+	 	temp = temp - 273.15;
+	 	printf("%-3.0f°C                    ", temp);
+	 }
+	 
+	 printf("\nHumidity:       ");
+	 
+	  for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	printf("%-3i%%                     ", cI.forecastInformation[i].humidity);
+	 	
+	 }
+	 
+	 printf("\nPressure:       ");
+	 
+	 for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	printf("%-5.0fhPa                 ", cI.forecastInformation[i].pressure);
+	 }
+	 
+	 
+	 printf("\nWindSpeed:      ");
+	 
+	  for(i=b;i<a;i++) //for loop to display contents of array
+	 {
+	 	printf("%-5.2fm/h                 ", cI.forecastInformation[i].windSpeed);
+	 }
+	 
+	 printf("\nWindDirection:  ");
+	 
+	 for(i=b;i<a;i++) //for loop to display contents of array
 	 {
 	 	printf("%-3.0f°                     ", cI.forecastInformation[i].windDirection);
 	 }
