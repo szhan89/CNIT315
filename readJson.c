@@ -43,19 +43,12 @@ struct cityInformation cI;//createing a city structure
 
  char c[10] = "GMT";
  
+
 int getTimezone(int a){//convert the time zone from seconds to hour
     a= a/3600;
     
     return a;
-   /* 
-    char b[5];
-    
-    sprintf(b, "%d",a);
-    
-    strcat(c, b);
-    // printf("%s",c);
-  
-    */
+
 }
 void readJson(){
     
@@ -133,7 +126,8 @@ void readJson(){
 
 }
 
-void DisplayData(int a)
+
+void DisplayData()
 {
 	 int i, tzone = 0;
 	 double temp;
@@ -309,7 +303,6 @@ void DisplayNext(int b, int a)
 	
 	
 }
-
 
 
 
